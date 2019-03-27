@@ -1,0 +1,12 @@
+﻿{
+  "ID": "C3A02D1358514FB6A754A40C58C8249F",
+  "ActionKeyword": "pw",
+  "Name": "Random Password Generator",
+  "Description": "A simple arbitrary length password generator.",
+  "Author": "hamed momen",
+  "Version": "1.0.0",
+  "Language": "csharp",
+  "Website": "http://www.xpktro.com",
+  "IcoPath": "Images\\password.png",
+  "ExecuteFileName": "Random.Password.Generator.dll"
+}
