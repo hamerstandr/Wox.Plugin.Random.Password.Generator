@@ -47,6 +47,7 @@ namespace Random.Password.Generator
                         {
                             context.API.HideApp();
                             Clipboard.SetText(r);
+                            ShowBalloon("Random Password Generator", "Copy to clypbord Password" );
                             return true;
                         }
                     });
@@ -69,6 +70,27 @@ namespace Random.Password.Generator
                 chars[i] = validChars[random.Next(0, validChars.Length)];
             }
             return new string(chars);
+        }
+        private void ShowBalloon(string title, string body)
+        {
+            NotifyIcon notifyIcon = new NotifyIcon();
+            notifyIcon.Visible = true;
+
+            if (title != null)
+            {
+                notifyIcon.BalloonTipTitle = title;
+            }
+
+            if (body != null)
+            {
+                notifyIcon.BalloonTipText = body;
+            }
+
+            notifyIcon.ShowBalloonTip(30000);
+            // The notification should be disposed when you don't need it anymore,
+            // but doing so will immediately close the balloon if it's visible.
+            notifyIcon.Dispose();
+
         }
     }
 }
